@@ -11,6 +11,11 @@ export default function Home() {
    <Link href="/login/login" asChild>
     <Button title="Login" />
    </Link>
+
+   <Link href="/register/register" asChild>
+    <Button title="Register" />
+   </Link>
+
   </View>
  )
 }

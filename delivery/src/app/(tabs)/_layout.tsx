@@ -17,15 +17,7 @@ export default function TabRoutesLayout() {
       )
      }}
      />
-     <Tabs.Screen 
-     name="profile"
-     options={{
-      title: "Profile",
-      tabBarIcon: ({ size, color }) => (
-        <MaterialIcons name="person" size={size} color={color} />
-      )
-     }}
-     />
+     
      <Tabs.Screen 
       name="categories"
       options={{
@@ -34,6 +26,16 @@ export default function TabRoutesLayout() {
           <MaterialIcons name="lunch-dining" size={size} color={color} />
         )
        }}
+     />
+
+     <Tabs.Screen 
+     name="profile"
+     options={{
+      title: "Profile",
+      tabBarIcon: ({ size, color }) => (
+        <MaterialIcons name="person" size={size} color={color} />
+      )
+     }}
      />
 
   </Tabs>

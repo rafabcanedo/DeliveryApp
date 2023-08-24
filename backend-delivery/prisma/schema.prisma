@@ -6,3 +6,55 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id String @id @default(uuid())
+  email String @unique
+  name String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  product_rent ProductRent[] @relation("user")
+
+  @@map("users")
+}
+
+model Product {
+ id String @id @default(uuid())
+ name String @unique
+ Image String
+ price Int
+ description String
+ stock Int
+ // category Category[]
+ created_at DateTime @default(now())
+ product_rent ProductRent[] @relation("product")
+
+ @@map("products")
+}
+
+model Order {
+  id String @id @default(uuid())
+  // items String[]
+  Price Int
+  created_at DateTime @default(now())
+
+  @@map("orders")
+}
+
+model ProductRent {
+ user User @relation("user", fields: [userId], references: [id])
+ userId String
+ product Product @relation("product", fields: [productId], references: [id])
+ productId String
+
+ @@id([userId, productId])
+ @@map("product_rent")
+}
+
+// type Category {
+//  drink String
+//  food String
+//  candy String
+// }
+
+// Category '???'

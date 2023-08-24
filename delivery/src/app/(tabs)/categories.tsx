@@ -1,5 +1,6 @@
 import { Link } from "expo-router";
-import { Text, View, Button } from "react-native";
+import { Text, View } from "react-native";
+import { Button } from "@/components/Button";
 
 export default function Categories() {
  return(
@@ -9,8 +10,9 @@ export default function Categories() {
    </Text>
 
    <Link href="/profile" asChild>
-    <Button title="Profile" />
    </Link>
+
+   <Button />
   </View>
  )
 }
