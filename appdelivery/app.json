@@ -1,8 +1,7 @@
 {
   "expo": {
-    "name": "delivery",
-    "slug": "delivery",
-    "scheme": "delivery",
+    "name": "appdelivery",
+    "slug": "appdelivery",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,15 +24,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png",
-      "bundler": "metro"
-    },
-    "experiments": {
-      "typedRoutes": true,
-      "tsconfigPaths": true
-    },
-    "plugins": [
-      "expo-router"
-    ]
+      "favicon": "./assets/favicon.png"
+    }
   }
 }
