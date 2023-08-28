@@ -1,8 +1,11 @@
-import { Home } from './src/screens/Home';
-import { Text, View } from 'react-native';
+import { NativeBaseProvider } from "native-base";
+import Routes from "./src/routes";
+import Login from "./src/screens/Login";
 
 export default function App() {
   return (
-   <Home />
+   <NativeBaseProvider>
+   <Login />
+   </NativeBaseProvider>
   );
 }
