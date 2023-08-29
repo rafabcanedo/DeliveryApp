@@ -1,7 +1,11 @@
-import { Button as ButtonNativeBase, Text } from 'native-base';
+import { useState } from 'react';
+import { Button as ButtonNativeBase, Spinner, Text } from 'native-base';
 import { IBtnProps } from "../../@types";
 
 export function Button({ title, ...rest }: IBtnProps) {
+
+  const [loading, setLoading] = useState(false)
+
  return (
   <ButtonNativeBase
    w="100%"
@@ -11,8 +15,10 @@ export function Button({ title, ...rest }: IBtnProps) {
    _pressed={{
     bgColor: "#e6b137"
    }}
+   onPress={() => setLoading(!loading)}
    {...rest}
   >
+    {!loading ? (
     <Text
      color="white"
      fontSize="lg"
@@ -21,16 +27,9 @@ export function Button({ title, ...rest }: IBtnProps) {
     >
      {title}
     </Text>
+     ) : (
+    <Spinner color="emerald.500" size="sm" />
+     )}
   </ButtonNativeBase>
  )
 }
-
-// export function Button({ title }: IButtonProps) {
-//  return(
-//   <Pressable style={styles.ContainerButton}>
-//    <Text style={styles.TextButton}>
-//      {title}
-//    </Text>
-//   </Pressable>
-//  )
-// }

@@ -3,6 +3,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 import Home from "../screens/Home";
 import Categories from "../screens/Categories";
+import Cart from "../screens/Cart";
 import Profile from "../screens/Profile";
 
 const Tab = createBottomTabNavigator();
@@ -30,6 +31,15 @@ export default function TabRoutes(){
     options={{
      tabBarIcon: ({ color, size }) => <MaterialIcons name="lunch-dining" size={size} color={color} />,
      tabBarLabel: 'Categories'
+    }}
+   />
+
+   <Tab.Screen 
+    name="cart"
+    component={Cart}
+    options={{
+     tabBarIcon: ({ color, size }) => <MaterialIcons name="shopping-cart" size={size} color={color} />,
+     tabBarLabel: 'Cart'
     }}
    />
 
