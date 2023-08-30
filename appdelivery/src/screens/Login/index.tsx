@@ -1,9 +1,10 @@
-import { VStack, Heading, Center, Pressable, Text } from 'native-base';
+import { VStack, Heading, Center, Pressable, Text, View } from 'native-base';
 import { useNavigation } from "@react-navigation/native";
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { SignInDataProps } from '../../@types';
+import { AntDesign } from '@expo/vector-icons';
 
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
@@ -20,8 +21,12 @@ export default function Login() {
     resolver: yupResolver(signInSchema)
    });
 
- function openRegister() {
-  navigation.navigate('register')
+  function openRegister() {
+   navigation.navigate('register')
+  }
+
+  function goToMedium() {
+   navigation.navigate('medium')
   }
 
   const handleSignUp = (data: SignInDataProps) => {
@@ -29,9 +34,14 @@ export default function Login() {
   }
 
  return(
-  <VStack className='flex-1 bg-background p-8'>
+  <VStack flex={1} bgColor="#e6e6e6" justifyContent="center" p="8">
+  <View w="full" h="20" alignItems="flex-start" justifyContent="center" mt="16">
+    <Pressable w="16" h="16" bgColor="#ffc93c" rounded="full" alignItems="center" justifyContent="center" mr="8" onPress={goToMedium}>
+    <AntDesign name="arrowleft" size={24} color="white" />
+    </Pressable>
+  </View>
   <Center>
-  <Heading className='text-black'>
+  <Heading color="black">
     Login
   </Heading>
 

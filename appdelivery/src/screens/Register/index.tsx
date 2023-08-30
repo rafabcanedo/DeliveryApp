@@ -33,9 +33,9 @@ export default function Register() {
   }
 
  return(
- <VStack className='flex-1 bg-background p-8'>
+ <VStack flex={1} bgColor="#e6e6e6" justifyContent="center" p="8">
   <Center>
-  <Heading className='text-black'>
+  <Heading color="black">
     Register
   </Heading>
 
