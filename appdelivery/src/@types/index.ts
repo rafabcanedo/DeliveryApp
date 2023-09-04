@@ -1,4 +1,5 @@
 import { IButtonProps, IInputProps } from "native-base"
+import { ReactNode } from "react"
 
 export type IBtnProps = IButtonProps & {
  title: string
@@ -18,4 +19,9 @@ export type FormDataProps = {
 export type SignInDataProps = {
  email: string
  password: string
+}
+
+export type CardProps = {
+ icon: ReactNode
+ text: string
 }

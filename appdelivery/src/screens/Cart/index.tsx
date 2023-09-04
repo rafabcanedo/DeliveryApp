@@ -1,4 +1,4 @@
-import { VStack, Text, Heading, Pressable } from 'native-base';
+import { VStack, Text, Heading, Pressable, View } from 'native-base';
 import { useNavigation } from "@react-navigation/native";
 
 export default function Cart() {
@@ -9,23 +9,27 @@ export default function Cart() {
   }
 
  return(
- <VStack flex={1} alignItems="center" justifyContent="center" bgColor="#e6e6e6">
+ <VStack flex={1} bgColor="#e6e6e6">
+  <View flex={1} alignItems="center" justifyContent="center">
   <Heading color="black">
     Your Cart is empty
   </Heading>
 
-  <Pressable 
-   h={6}
-   w={24}
-   bgColor="blue.900"
+  <Pressable
+   w="200"
+   h="10"
+   bgColor="yellow.200"
    mt={4}
    borderRadius={6}
    onPress={goShop}
+   alignItems="center"
+   justifyContent="center"
   >
-    <Text size="lg" color="#ffc93c">
+    <Text color="darkBlue.400" fontWeight="medium" fontSize="lg">
       Go to Shop
     </Text>
   </Pressable>
+  </View>
 
  </VStack>
  )

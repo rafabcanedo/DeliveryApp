@@ -1,10 +1,9 @@
-import { VStack, Heading, StatusBar, Box, HStack, Text, View } from 'native-base';
+import { View, StatusBar, HStack, Text, Box } from "native-base";
 import { MaterialIcons } from '@expo/vector-icons';
-import { PromoCard } from '../../components/PromoCard';
 
-export default function Home() {
- return(
- <View>
+export function Header() {
+ return (
+  <View>
   <StatusBar backgroundColor="#3700B3" barStyle="light-content" />
    <Box safeAreaTop bg="#f8da5b" />
   <HStack bg="violet.800" px="4" py="3" justifyContent="space-between" alignItems="center" w="full">
@@ -17,19 +16,6 @@ export default function Home() {
     <MaterialIcons name="logout" size={24} color="white" />
   </HStack>
   </HStack>
-
-  <View>
-  <Box w="full" h="260" bg="yellow.400">
-  </Box>
-  <PromoCard />
   </View>
-
-  <Text
-   fontWeight="semibold"
-   underline
-  >
-    Popular Now
-  </Text>
- </View>
  )
 }
