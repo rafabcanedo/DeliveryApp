@@ -7,7 +7,7 @@ export function PromoCard() {
    bgColor="blueGray.100"
    paddingRight="20" 
    paddingLeft="20" 
-   marginTop="-24"
+   marginTop="-25"
    marginRight="12"
    marginLeft="12"
    borderRadius="lg"

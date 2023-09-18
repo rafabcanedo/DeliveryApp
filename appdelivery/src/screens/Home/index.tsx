@@ -1,6 +1,7 @@
 import { VStack, Heading, StatusBar, Box, HStack, Text, View } from 'native-base';
 import { MaterialIcons } from '@expo/vector-icons';
 import { PromoCard } from '../../components/PromoCard';
+import { Popular } from '../../components/Populuar';
 
 export default function Home() {
  return(
@@ -24,12 +25,7 @@ export default function Home() {
   <PromoCard />
   </View>
 
-  <Text
-   fontWeight="semibold"
-   underline
-  >
-    Popular Now
-  </Text>
+  <Popular />
  </View>
  )
 }
